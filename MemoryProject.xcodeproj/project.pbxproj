@@ -15,6 +15,10 @@
 		9AE4E6AC1F03EED700A5422F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6AB1F03EED700A5422F /* main.m */; };
 		9AE4E6B41F03F45B00A5422F /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6B31F03F45B00A5422F /* ButtonCell.m */; };
 		9AE4E6B71F03F60D00A5422F /* UIColor+KYRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6B51F03F60700A5422F /* UIColor+KYRandomColor.m */; };
+		9AE4E6BA1F03FA2300A5422F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6B91F03FA2300A5422F /* DetailViewController.m */; };
+		9AE4E6BD1F03FAF400A5422F /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6BC1F03FAF400A5422F /* DetailCell.m */; };
+		9AE4E6C01F04019F00A5422F /* SubDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */; };
+		9AE4E6C31F04043F00A5422F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6C21F04043F00A5422F /* AddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,14 @@
 		9AE4E6B31F03F45B00A5422F /* ButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
 		9AE4E6B51F03F60700A5422F /* UIColor+KYRandomColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KYRandomColor.m"; sourceTree = "<group>"; };
 		9AE4E6B61F03F60700A5422F /* UIColor+KYRandomColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+KYRandomColor.h"; sourceTree = "<group>"; };
+		9AE4E6B81F03FA2300A5422F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		9AE4E6B91F03FA2300A5422F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		9AE4E6BB1F03FAF400A5422F /* DetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		9AE4E6BC1F03FAF400A5422F /* DetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		9AE4E6BE1F04019F00A5422F /* SubDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubDetailViewController.h; sourceTree = "<group>"; };
+		9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubDetailViewController.m; sourceTree = "<group>"; };
+		9AE4E6C11F04043F00A5422F /* AddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		9AE4E6C21F04043F00A5422F /* AddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,14 @@
 				9AE4E6AB1F03EED700A5422F /* main.m */,
 				9AE4E6B21F03F45B00A5422F /* ButtonCell.h */,
 				9AE4E6B31F03F45B00A5422F /* ButtonCell.m */,
+				9AE4E6B81F03FA2300A5422F /* DetailViewController.h */,
+				9AE4E6B91F03FA2300A5422F /* DetailViewController.m */,
+				9AE4E6BB1F03FAF400A5422F /* DetailCell.h */,
+				9AE4E6BC1F03FAF400A5422F /* DetailCell.m */,
+				9AE4E6BE1F04019F00A5422F /* SubDetailViewController.h */,
+				9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */,
+				9AE4E6C11F04043F00A5422F /* AddViewController.h */,
+				9AE4E6C21F04043F00A5422F /* AddViewController.m */,
 			);
 			path = MemoryProject;
 			sourceTree = "<group>";
@@ -152,11 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE4E6C01F04019F00A5422F /* SubDetailViewController.m in Sources */,
 				9AE4E6A11F03EED700A5422F /* ViewController.m in Sources */,
 				9AE4E6AC1F03EED700A5422F /* main.m in Sources */,
 				9AE4E6B71F03F60D00A5422F /* UIColor+KYRandomColor.m in Sources */,
 				9AE4E69E1F03EED700A5422F /* AppDelegate.m in Sources */,
 				9AE4E6B41F03F45B00A5422F /* ButtonCell.m in Sources */,
+				9AE4E6BD1F03FAF400A5422F /* DetailCell.m in Sources */,
+				9AE4E6BA1F03FA2300A5422F /* DetailViewController.m in Sources */,
+				9AE4E6C31F04043F00A5422F /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
