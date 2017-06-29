@@ -7,8 +7,10 @@
 //
 
 #import "DetailViewController.h"
+#import "SubDetailViewController.h"
 #import "DetailCell.h"
 #import "db005.h"
+
 @interface DetailViewController (){
     NSMutableArray *_dataArray;
 }
@@ -57,7 +59,8 @@ static NSString * const reuseIdentifier = @"DetailCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+//    SubDetailViewController *vc = [HOME_STORYBOARD instantiateViewControllerWithIdentifier:@"SubDetailViewController"];
+//    vc.db = [_dataArray objectAtIndex:indexPath.row];
 }
 
 #pragma mark UITableViewDataSource
@@ -67,6 +70,7 @@ static NSString * const reuseIdentifier = @"DetailCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    cell.tag = indexPath.row;
     db005 *data = [_dataArray objectAtIndex:indexPath.row];
     cell.accountDescText.text = data.accountDesc;
     return cell;
@@ -78,6 +82,14 @@ static NSString * const reuseIdentifier = @"DetailCell";
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     NSLog(@"%@,identify = %@",sender,segue.identifier);
+    if ([segue.destinationViewController class] == [SubDetailViewController class]){
+        SubDetailViewController *vc = segue.destinationViewController;
+        NSInteger row = -1;
+        if ([sender isKindOfClass:(DetailCell.self)]){
+            row = ((DetailCell *)sender).tag;
+        }
+        vc.db = [_dataArray objectAtIndex:row];
+    }
 }
  
 -(IBAction)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
