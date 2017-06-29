@@ -7,3 +7,5 @@
 //
 
 #define TYPES  @"邮箱、银行、娱乐、其他" 
+
+#define HOME_STORYBOARD [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]

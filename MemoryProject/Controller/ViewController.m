@@ -43,7 +43,10 @@ static NSString * const reuseIdentifier = @"ButtonCell";
         _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(self.view.width - 65, self.view.height - 65, 50, 50) mainImageName:@"add.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
         __weak typeof(self) weakSelf = self;
         _floatWindow.clickBolcks = ^(NSInteger i) {
-            [weakSelf performSegueWithIdentifier:@"AddViewController" sender:nil];
+            UIViewController *vc = [HOME_STORYBOARD instantiateViewControllerWithIdentifier:@"AddViewController"];
+            [weakSelf presentViewController:vc animated:YES completion:^{
+                //todo
+            }];
         };
     }
     return _floatWindow;
