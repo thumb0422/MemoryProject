@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 #import "ButtonCell.h"
 #import "DYYFloatWindow.h"
 
-@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>{
+@interface ViewController (){
     NSArray *_typeArray;
 }
 @property (nonatomic,strong) DYYFloatWindow *floatWindow;
@@ -64,6 +65,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ButtonCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.titleLabel.text = [_typeArray objectAtIndex:indexPath.row];
+    cell.type = 1000 + indexPath.row;
     return cell;
 }
 
@@ -92,5 +94,10 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 
 -(IBAction)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     NSLog(@"%@,identify = %@",sender,segue.identifier);
+    if ([[segue destinationViewController] class] == [DetailViewController class]){
+        DetailViewController *vc = [segue destinationViewController];
+        vc.type = ((ButtonCell *)sender).type;
+    }
+    
 }
 @end

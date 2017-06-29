@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ButtonCell : UICollectionViewCell
+@property (nonatomic,assign) kDataType type;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

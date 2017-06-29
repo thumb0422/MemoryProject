@@ -8,26 +8,52 @@
 
 #import "DetailViewController.h"
 #import "DetailCell.h"
-@interface DetailViewController ()
-
+#import "db005.h"
+@interface DetailViewController (){
+    NSMutableArray *_dataArray;
+}
+@property (nonatomic,strong) StoreManager *storeManager;
 @end
 
 @implementation DetailViewController
 static NSString * const reuseIdentifier = @"DetailCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"aaaa";
     // Do any additional setup after loading the view.
+    _dataArray = [[NSMutableArray alloc] initWithCapacity:0];
+    NSDictionary *qryDic = @{@"tableName":@"db005",
+                             @"filterInfo":@{@"dataType":INT2STRING(_type)}
+                             };
+    [self qryData:qryDic];
 }
 
+#pragma mark qryData
+-(void)qryData:(NSDictionary *)qryDic{
+    [_dataArray removeAllObjects];
+    NSArray *qryDataArray = [self.storeManager qryData:qryDic];
+    for (int i = 0;i < qryDataArray.count;i ++){
+        NSError *error;
+        db005 *db5 = SECMODEL([db005 class], [qryDataArray objectAtIndex:i], error);
+        [_dataArray addObject:db5];
+    }
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark storeManager
+-(StoreManager *)storeManager{
+    if (_storeManager == nil){
+        _storeManager = [StoreManager getInstance];
+    }
+    return _storeManager;
+}
+
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 44.0f;
+    return 60.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -36,11 +62,13 @@ static NSString * const reuseIdentifier = @"DetailCell";
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return _dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    db005 *data = [_dataArray objectAtIndex:indexPath.row];
+    cell.accountDescText.text = data.accountDesc;
     return cell;
 }
 
