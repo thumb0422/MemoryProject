@@ -19,6 +19,17 @@
 		9AE4E6BD1F03FAF400A5422F /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6BC1F03FAF400A5422F /* DetailCell.m */; };
 		9AE4E6C01F04019F00A5422F /* SubDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */; };
 		9AE4E6C31F04043F00A5422F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6C21F04043F00A5422F /* AddViewController.m */; };
+		9AE4E6F51F04976200A5422F /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6EE1F04975B00A5422F /* AESCrypt.m */; };
+		9AE4E6F61F04976800A5422F /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6F31F04975B00A5422F /* DBManager.m */; };
+		9AE4E6F71F04977000A5422F /* StoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6F21F04975B00A5422F /* StoreManager.m */; };
+		9AE4E6F81F04977F00A5422F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6E31F04975100A5422F /* NSData+Base64.m */; };
+		9AE4E6F91F04978200A5422F /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6DE1F04975100A5422F /* NSData+CommonCrypto.m */; };
+		9AE4E6FA1F04978C00A5422F /* NSObject+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6EA1F04975100A5422F /* NSObject+Dictionary.m */; };
+		9AE4E6FB1F04979100A5422F /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6DF1F04975100A5422F /* NSString+Base64.m */; };
+		9AE4E6FC1F04979300A5422F /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6DD1F04975100A5422F /* NSString+Utility.m */; };
+		9AE4E6FD1F0497A800A5422F /* UIView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6E71F04975100A5422F /* UIView+Utility.m */; };
+		9AE4E7051F04986100A5422F /* db005.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E7041F04985700A5422F /* db005.m */; };
+		9AE4E7061F04986500A5422F /* ModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E7031F04985700A5422F /* ModelObject.m */; };
 		AA49A06246CA91BDADE10909 /* libPods-MemoryProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AC3D5F9509686F26A88A77 /* libPods-MemoryProject.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +58,34 @@
 		9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubDetailViewController.m; sourceTree = "<group>"; };
 		9AE4E6C11F04043F00A5422F /* AddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		9AE4E6C21F04043F00A5422F /* AddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		9AE4E6DD1F04975100A5422F /* NSString+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utility.m"; sourceTree = "<group>"; };
+		9AE4E6DE1F04975100A5422F /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		9AE4E6DF1F04975100A5422F /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		9AE4E6E11F04975100A5422F /* UIView+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Utility.h"; sourceTree = "<group>"; };
+		9AE4E6E21F04975100A5422F /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		9AE4E6E31F04975100A5422F /* NSData+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		9AE4E6E51F04975100A5422F /* NSObject+Dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Dictionary.h"; sourceTree = "<group>"; };
+		9AE4E6E61F04975100A5422F /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		9AE4E6E71F04975100A5422F /* UIView+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utility.m"; sourceTree = "<group>"; };
+		9AE4E6E81F04975100A5422F /* NSData+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		9AE4E6EA1F04975100A5422F /* NSObject+Dictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Dictionary.m"; sourceTree = "<group>"; };
+		9AE4E6EB1F04975100A5422F /* NSString+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utility.h"; sourceTree = "<group>"; };
+		9AE4E6ED1F04975B00A5422F /* AESCrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		9AE4E6EE1F04975B00A5422F /* AESCrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		9AE4E6EF1F04975B00A5422F /* Encrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Encrypt.h; sourceTree = "<group>"; };
+		9AE4E6F01F04975B00A5422F /* StoreManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreManager.h; sourceTree = "<group>"; };
+		9AE4E6F11F04975B00A5422F /* EnumDataType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumDataType.h; sourceTree = "<group>"; };
+		9AE4E6F21F04975B00A5422F /* StoreManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreManager.m; sourceTree = "<group>"; };
+		9AE4E6F31F04975B00A5422F /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		9AE4E6F41F04975B00A5422F /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		9AE4E6FE1F0497D100A5422F /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		9AE4E6FF1F04981500A5422F /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		9AE4E7001F04982100A5422F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		9AE4E7011F04985700A5422F /* ModelObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelObject.h; sourceTree = "<group>"; };
+		9AE4E7021F04985700A5422F /* db005.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = db005.h; sourceTree = "<group>"; };
+		9AE4E7031F04985700A5422F /* ModelObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelObject.m; sourceTree = "<group>"; };
+		9AE4E7041F04985700A5422F /* db005.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = db005.m; sourceTree = "<group>"; };
+		9AE4E7071F04989400A5422F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A0AC3D5F9509686F26A88A77 /* libPods-MemoryProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoryProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,34 +131,110 @@
 		9AE4E69B1F03EED700A5422F /* MemoryProject */ = {
 			isa = PBXGroup;
 			children = (
-				9AE4E6B61F03F60700A5422F /* UIColor+KYRandomColor.h */,
-				9AE4E6B51F03F60700A5422F /* UIColor+KYRandomColor.m */,
+				9AE4E6C81F04966300A5422F /* Utility */,
+				9AE4E6C71F0494FB00A5422F /* Controller */,
+				9AE4E6C61F0494F600A5422F /* Model */,
+				9AE4E6C51F0494EF00A5422F /* View */,
+				9AE4E6C41F0494CB00A5422F /* Category */,
 				9AE4E69C1F03EED700A5422F /* AppDelegate.h */,
 				9AE4E69D1F03EED700A5422F /* AppDelegate.m */,
-				9AE4E69F1F03EED700A5422F /* ViewController.h */,
-				9AE4E6A01F03EED700A5422F /* ViewController.m */,
-				9AE4E6A21F03EED700A5422F /* Main.storyboard */,
 				9AE4E6A51F03EED700A5422F /* Assets.xcassets */,
+				9AE4E6A21F03EED700A5422F /* Main.storyboard */,
 				9AE4E6A71F03EED700A5422F /* LaunchScreen.storyboard */,
 				9AE4E6AA1F03EED700A5422F /* Info.plist */,
 				9AE4E6AB1F03EED700A5422F /* main.m */,
+				9AE4E7071F04989400A5422F /* PrefixHeader.pch */,
+			);
+			path = MemoryProject;
+			sourceTree = "<group>";
+		};
+		9AE4E6C41F0494CB00A5422F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E6E81F04975100A5422F /* NSData+Base64.h */,
+				9AE4E6E31F04975100A5422F /* NSData+Base64.m */,
+				9AE4E6E61F04975100A5422F /* NSData+CommonCrypto.h */,
+				9AE4E6DE1F04975100A5422F /* NSData+CommonCrypto.m */,
+				9AE4E6E51F04975100A5422F /* NSObject+Dictionary.h */,
+				9AE4E6EA1F04975100A5422F /* NSObject+Dictionary.m */,
+				9AE4E6E21F04975100A5422F /* NSString+Base64.h */,
+				9AE4E6DF1F04975100A5422F /* NSString+Base64.m */,
+				9AE4E6EB1F04975100A5422F /* NSString+Utility.h */,
+				9AE4E6DD1F04975100A5422F /* NSString+Utility.m */,
+				9AE4E6E11F04975100A5422F /* UIView+Utility.h */,
+				9AE4E6E71F04975100A5422F /* UIView+Utility.m */,
+				9AE4E6B61F03F60700A5422F /* UIColor+KYRandomColor.h */,
+				9AE4E6B51F03F60700A5422F /* UIColor+KYRandomColor.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		9AE4E6C51F0494EF00A5422F /* View */ = {
+			isa = PBXGroup;
+			children = (
 				9AE4E6B21F03F45B00A5422F /* ButtonCell.h */,
 				9AE4E6B31F03F45B00A5422F /* ButtonCell.m */,
-				9AE4E6B81F03FA2300A5422F /* DetailViewController.h */,
-				9AE4E6B91F03FA2300A5422F /* DetailViewController.m */,
 				9AE4E6BB1F03FAF400A5422F /* DetailCell.h */,
 				9AE4E6BC1F03FAF400A5422F /* DetailCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9AE4E6C61F0494F600A5422F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E7021F04985700A5422F /* db005.h */,
+				9AE4E7041F04985700A5422F /* db005.m */,
+				9AE4E7011F04985700A5422F /* ModelObject.h */,
+				9AE4E7031F04985700A5422F /* ModelObject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9AE4E6C71F0494FB00A5422F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E69F1F03EED700A5422F /* ViewController.h */,
+				9AE4E6A01F03EED700A5422F /* ViewController.m */,
+				9AE4E6B81F03FA2300A5422F /* DetailViewController.h */,
+				9AE4E6B91F03FA2300A5422F /* DetailViewController.m */,
 				9AE4E6BE1F04019F00A5422F /* SubDetailViewController.h */,
 				9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */,
 				9AE4E6C11F04043F00A5422F /* AddViewController.h */,
 				9AE4E6C21F04043F00A5422F /* AddViewController.m */,
 			);
-			path = MemoryProject;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9AE4E6C81F04966300A5422F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E6FE1F0497D100A5422F /* Utility.h */,
+				9AE4E6EC1F04975B00A5422F /* Encrypt */,
+				9AE4E6F41F04975B00A5422F /* DBManager.h */,
+				9AE4E6F31F04975B00A5422F /* DBManager.m */,
+				9AE4E6F11F04975B00A5422F /* EnumDataType.h */,
+				9AE4E6F01F04975B00A5422F /* StoreManager.h */,
+				9AE4E6F21F04975B00A5422F /* StoreManager.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9AE4E6EC1F04975B00A5422F /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4E6ED1F04975B00A5422F /* AESCrypt.h */,
+				9AE4E6EE1F04975B00A5422F /* AESCrypt.m */,
+				9AE4E6EF1F04975B00A5422F /* Encrypt.h */,
+			);
+			path = Encrypt;
 			sourceTree = "<group>";
 		};
 		B2BA346D06CF0E1E2BC91C41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AE4E7001F04982100A5422F /* libsqlite3.0.tbd */,
+				9AE4E6FF1F04981500A5422F /* LocalAuthentication.framework */,
 				A0AC3D5F9509686F26A88A77 /* libPods-MemoryProject.a */,
 			);
 			name = Frameworks;
@@ -253,14 +368,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE4E6FC1F04979300A5422F /* NSString+Utility.m in Sources */,
+				9AE4E7051F04986100A5422F /* db005.m in Sources */,
 				9AE4E6C01F04019F00A5422F /* SubDetailViewController.m in Sources */,
 				9AE4E6A11F03EED700A5422F /* ViewController.m in Sources */,
+				9AE4E6F51F04976200A5422F /* AESCrypt.m in Sources */,
+				9AE4E6FA1F04978C00A5422F /* NSObject+Dictionary.m in Sources */,
+				9AE4E6FB1F04979100A5422F /* NSString+Base64.m in Sources */,
 				9AE4E6AC1F03EED700A5422F /* main.m in Sources */,
 				9AE4E6B71F03F60D00A5422F /* UIColor+KYRandomColor.m in Sources */,
 				9AE4E69E1F03EED700A5422F /* AppDelegate.m in Sources */,
+				9AE4E6F91F04978200A5422F /* NSData+CommonCrypto.m in Sources */,
 				9AE4E6B41F03F45B00A5422F /* ButtonCell.m in Sources */,
+				9AE4E7061F04986500A5422F /* ModelObject.m in Sources */,
+				9AE4E6F61F04976800A5422F /* DBManager.m in Sources */,
 				9AE4E6BD1F03FAF400A5422F /* DetailCell.m in Sources */,
+				9AE4E6FD1F0497A800A5422F /* UIView+Utility.m in Sources */,
+				9AE4E6F71F04977000A5422F /* StoreManager.m in Sources */,
 				9AE4E6BA1F03FA2300A5422F /* DetailViewController.m in Sources */,
+				9AE4E6F81F04977F00A5422F /* NSData+Base64.m in Sources */,
 				9AE4E6C31F04043F00A5422F /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +525,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KJTY8FB87G;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(TARGET_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = MemoryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -418,6 +546,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KJTY8FB87G;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(TARGET_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = MemoryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

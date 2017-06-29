@@ -16,6 +16,7 @@
 static NSString * const reuseIdentifier = @"DetailCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"aaaa";
     // Do any additional setup after loading the view.
 }
 
@@ -53,4 +54,7 @@ static NSString * const reuseIdentifier = @"DetailCell";
 }
 */
 
+-(IBAction)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
+    
+}
 @end

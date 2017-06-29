@@ -115,7 +115,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="FFr-of-t4i">
-                                        <barButtonItem key="leftBarButtonItem" title="返回" id="Skm-eG-Njn"/>
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="Skm-eG-Njn">
+                                            <connections>
+                                                <segue destination="G2z-S5-8b2" kind="unwind" unwindAction="unwindForSegue:towardsViewController:" id="JII-Qh-IVm"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -172,6 +176,7 @@
                     <navigationItem key="navigationItem" id="Hb0-li-WHm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idh-fS-bLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="G2z-S5-8b2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="925.60000000000002" y="38.23088455772114"/>
         </scene>
@@ -212,7 +217,12 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="R6Q-5q-W0I">
-                                        <barButtonItem key="leftBarButtonItem" title="返回" id="Cqb-EU-XUP"/>
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="Cqb-EU-XUP">
+                                            <connections>
+                                                <segue destination="Akx-sX-l2m" kind="unwind" unwindAction="unwindForSegue:towardsViewController:" id="RvY-qY-MMg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="save" id="CDv-NK-hK0"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -254,12 +264,15 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q67-Cs-GPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Akx-sX-l2m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1656" y="37"/>
         </scene>
     </scenes>
     <resources>
         <image name="Home" width="533" height="740"/>
+        <image name="back" width="16" height="16"/>
         <image name="cell" width="640" height="960"/>
+        <image name="save" width="16" height="16"/>
     </resources>
 </document>
