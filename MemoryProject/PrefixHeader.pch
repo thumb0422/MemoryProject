@@ -16,6 +16,7 @@
 #import "UIView+Utility.h"
 #import "EnumDataType.h"
 #import "Utility.h"
+#import "AppDefine.h"
 #import "StoreManager.h"
 #import "Encrypt.h"
 

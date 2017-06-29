@@ -10,8 +10,9 @@
 #import "ButtonCell.h"
 #import "DYYFloatWindow.h"
 
-@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
-
+@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>{
+    NSArray *_typeArray;
+}
 @property (nonatomic,strong) DYYFloatWindow *floatWindow;
 @end
 
@@ -19,6 +20,7 @@
 static NSString * const reuseIdentifier = @"ButtonCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _typeArray = [TYPES componentsSeparatedByString:@"、"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +43,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
         _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(self.view.width - 65, self.view.height - 65, 50, 50) mainImageName:@"add.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
         __weak typeof(self) weakSelf = self;
         _floatWindow.clickBolcks = ^(NSInteger i) {
-//            [weakSelf addBtnClick];
+            [weakSelf performSegueWithIdentifier:@"AddViewController" sender:nil];
         };
     }
     return _floatWindow;
@@ -53,12 +55,12 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 8;
+    return _typeArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ButtonCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.titleLabel.text = [NSString stringWithFormat:@"第%ld幅图",(long)indexPath.item];
+    cell.titleLabel.text = [_typeArray objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -81,26 +83,11 @@ static NSString * const reuseIdentifier = @"ButtonCell";
      return YES;
  }
 
-/*
- // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
- - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
- return NO;
- }
- 
- - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
- return NO;
- }
- 
- - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
- 
- }
- */
-
--(IBAction)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
-    
-}
+//-(IBAction)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
+//
+//}
 
 -(IBAction)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
+    NSLog(@"%@,identify = %@",sender,segue.identifier);
 }
 @end

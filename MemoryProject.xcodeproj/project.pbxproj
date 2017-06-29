@@ -30,7 +30,6 @@
 		9AE4E6FD1F0497A800A5422F /* UIView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6E71F04975100A5422F /* UIView+Utility.m */; };
 		9AE4E7051F04986100A5422F /* db005.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E7041F04985700A5422F /* db005.m */; };
 		9AE4E7061F04986500A5422F /* ModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E7031F04985700A5422F /* ModelObject.m */; };
-		9AE4E70F1F049C5900A5422F /* db005Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E70C1F049C5600A5422F /* db005Cell.m */; };
 		9AE4E7101F049C5C00A5422F /* DownSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E70A1F049C5600A5422F /* DownSelectView.m */; };
 		9AE4E7111F049C5F00A5422F /* DYYFloatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E70D1F049C5600A5422F /* DYYFloatWindow.m */; };
 		AA49A06246CA91BDADE10909 /* libPods-MemoryProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AC3D5F9509686F26A88A77 /* libPods-MemoryProject.a */; };
@@ -89,13 +88,11 @@
 		9AE4E7031F04985700A5422F /* ModelObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelObject.m; sourceTree = "<group>"; };
 		9AE4E7041F04985700A5422F /* db005.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = db005.m; sourceTree = "<group>"; };
 		9AE4E7071F04989400A5422F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		9AE4E7081F049C5600A5422F /* db005Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = db005Cell.h; sourceTree = "<group>"; };
 		9AE4E7091F049C5600A5422F /* DownSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownSelectView.h; sourceTree = "<group>"; };
 		9AE4E70A1F049C5600A5422F /* DownSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownSelectView.m; sourceTree = "<group>"; };
 		9AE4E70B1F049C5600A5422F /* DYYFloatWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYYFloatWindow.h; sourceTree = "<group>"; };
-		9AE4E70C1F049C5600A5422F /* db005Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = db005Cell.m; sourceTree = "<group>"; };
 		9AE4E70D1F049C5600A5422F /* DYYFloatWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYYFloatWindow.m; sourceTree = "<group>"; };
-		9AE4E70E1F049C5600A5422F /* db005Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = db005Cell.xib; sourceTree = "<group>"; };
+		9AE4E7151F04EF4A00A5422F /* AppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
 		A0AC3D5F9509686F26A88A77 /* libPods-MemoryProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemoryProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -182,9 +179,6 @@
 		9AE4E6C51F0494EF00A5422F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9AE4E7081F049C5600A5422F /* db005Cell.h */,
-				9AE4E70C1F049C5600A5422F /* db005Cell.m */,
-				9AE4E70E1F049C5600A5422F /* db005Cell.xib */,
 				9AE4E7091F049C5600A5422F /* DownSelectView.h */,
 				9AE4E70A1F049C5600A5422F /* DownSelectView.m */,
 				9AE4E70B1F049C5600A5422F /* DYYFloatWindow.h */,
@@ -233,6 +227,7 @@
 				9AE4E6F11F04975B00A5422F /* EnumDataType.h */,
 				9AE4E6F01F04975B00A5422F /* StoreManager.h */,
 				9AE4E6F21F04975B00A5422F /* StoreManager.m */,
+				9AE4E7151F04EF4A00A5422F /* AppDefine.h */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -400,7 +395,6 @@
 				9AE4E6B41F03F45B00A5422F /* ButtonCell.m in Sources */,
 				9AE4E7061F04986500A5422F /* ModelObject.m in Sources */,
 				9AE4E6F61F04976800A5422F /* DBManager.m in Sources */,
-				9AE4E70F1F049C5900A5422F /* db005Cell.m in Sources */,
 				9AE4E6BD1F03FAF400A5422F /* DetailCell.m in Sources */,
 				9AE4E7101F049C5C00A5422F /* DownSelectView.m in Sources */,
 				9AE4E6FD1F0497A800A5422F /* UIView+Utility.m in Sources */,

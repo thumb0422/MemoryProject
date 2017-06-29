@@ -7,10 +7,8 @@
 //
 
 #import "ModelObject.h"
-#import "EnumDataType.h"
 
 @interface db005 : ModelObject
-
 @property(nonatomic,copy) NSString *accountKey;//UUID
 @property(nonatomic,copy) NSString *account;//帐号
 @property(nonatomic,copy) NSString *accountPWD;//密码
