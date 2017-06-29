@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 #import "ButtonCell.h"
+#import "DYYFloatWindow.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
+@property (nonatomic,strong) DYYFloatWindow *floatWindow;
 @end
 
 @implementation ViewController
@@ -23,8 +25,29 @@ static NSString * const reuseIdentifier = @"ButtonCell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark <UICollectionViewDataSource>
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.floatWindow showWindow];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self.floatWindow dissmissWindow];
+}
+
+-(DYYFloatWindow *)floatWindow{
+    if (_floatWindow == nil){
+        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(self.view.width - 65, self.view.height - 65, 50, 50) mainImageName:@"add.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
+        __weak typeof(self) weakSelf = self;
+        _floatWindow.clickBolcks = ^(NSInteger i) {
+//            [weakSelf addBtnClick];
+        };
+    }
+    return _floatWindow;
+}
+
+#pragma mark <UICollectionViewDataSource>
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
