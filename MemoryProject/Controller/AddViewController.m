@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"新增记忆仓库";
     self.accountType.placeholder = @"类型选择";
     self.accountType.delegate = self;
     self.accountType.listArray = [TYPES componentsSeparatedByString:@"、"];
@@ -30,9 +31,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)saveClick:(id)sender {
+- (IBAction)saveBtnClick:(UIButton *)sender {
     if ([self.accountDescText.text isEqualToString:@""]){
-        [self.view makeToast:@"请输入说明信息"];
+        [self.view makeToast:@"请输入说明信息" duration:1.0f position:CSToastPositionTop];
         return;
     }
     db005 *db5 = [[db005 alloc] init];
@@ -42,10 +43,7 @@
     db5.dataType = INT2STRING(selectedDataType);
     [db5 doAction:kDataActionAdd];
     [self.view makeToast:@"保存成功" duration:1.5f position:CSToastPositionTop];
-    UIViewController *vc = [HOME_STORYBOARD instantiateViewControllerWithIdentifier:@"ViewController"];
-    [self presentViewController:vc animated:YES completion:^{
-        //todo
-    }];
+    [self performSegueWithIdentifier:@"AddVC2Home" sender:nil];
 }
 
 /*

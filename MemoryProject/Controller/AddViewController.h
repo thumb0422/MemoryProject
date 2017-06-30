@@ -14,6 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *accountText;
 @property (weak, nonatomic) IBOutlet UITextField *accountPWDText;
 @property (weak, nonatomic) IBOutlet UITextField *accountDescText;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveDataBtn;
+@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
 
 @end

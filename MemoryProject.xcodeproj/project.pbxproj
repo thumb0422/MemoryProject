@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1068DB1F060FB90016F605 /* DetailTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1068DA1F060FB90016F605 /* DetailTVController.m */; };
 		9AE4E69E1F03EED700A5422F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E69D1F03EED700A5422F /* AppDelegate.m */; };
 		9AE4E6A11F03EED700A5422F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6A01F03EED700A5422F /* ViewController.m */; };
 		9AE4E6A41F03EED700A5422F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE4E6A21F03EED700A5422F /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		9AE4E6AC1F03EED700A5422F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6AB1F03EED700A5422F /* main.m */; };
 		9AE4E6B41F03F45B00A5422F /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6B31F03F45B00A5422F /* ButtonCell.m */; };
 		9AE4E6B71F03F60D00A5422F /* UIColor+KYRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6B51F03F60700A5422F /* UIColor+KYRandomColor.m */; };
-		9AE4E6BA1F03FA2300A5422F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6B91F03FA2300A5422F /* DetailViewController.m */; };
 		9AE4E6BD1F03FAF400A5422F /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6BC1F03FAF400A5422F /* DetailCell.m */; };
 		9AE4E6C01F04019F00A5422F /* SubDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */; };
 		9AE4E6C31F04043F00A5422F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6C21F04043F00A5422F /* AddViewController.m */; };
@@ -38,6 +38,8 @@
 /* Begin PBXFileReference section */
 		679395C2996CA8C9C21D8DA9 /* Pods-MemoryProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryProject/Pods-MemoryProject.release.xcconfig"; sourceTree = "<group>"; };
 		7AF39EE1F0EFD6A21CABA768 /* Pods-MemoryProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryProject/Pods-MemoryProject.debug.xcconfig"; sourceTree = "<group>"; };
+		9A1068D91F060FB90016F605 /* DetailTVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTVController.h; sourceTree = "<group>"; };
+		9A1068DA1F060FB90016F605 /* DetailTVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTVController.m; sourceTree = "<group>"; };
 		9AE4E6991F03EED700A5422F /* MemoryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE4E69C1F03EED700A5422F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AE4E69D1F03EED700A5422F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		9AE4E6B31F03F45B00A5422F /* ButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
 		9AE4E6B51F03F60700A5422F /* UIColor+KYRandomColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KYRandomColor.m"; sourceTree = "<group>"; };
 		9AE4E6B61F03F60700A5422F /* UIColor+KYRandomColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+KYRandomColor.h"; sourceTree = "<group>"; };
-		9AE4E6B81F03FA2300A5422F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		9AE4E6B91F03FA2300A5422F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		9AE4E6BB1F03FAF400A5422F /* DetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
 		9AE4E6BC1F03FAF400A5422F /* DetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
 		9AE4E6BE1F04019F00A5422F /* SubDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubDetailViewController.h; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 			children = (
 				9AE4E69F1F03EED700A5422F /* ViewController.h */,
 				9AE4E6A01F03EED700A5422F /* ViewController.m */,
-				9AE4E6B81F03FA2300A5422F /* DetailViewController.h */,
-				9AE4E6B91F03FA2300A5422F /* DetailViewController.m */,
+				9A1068D91F060FB90016F605 /* DetailTVController.h */,
+				9A1068DA1F060FB90016F605 /* DetailTVController.m */,
 				9AE4E6BE1F04019F00A5422F /* SubDetailViewController.h */,
 				9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */,
 				9AE4E6C11F04043F00A5422F /* AddViewController.h */,
@@ -393,13 +393,13 @@
 				9AE4E69E1F03EED700A5422F /* AppDelegate.m in Sources */,
 				9AE4E6F91F04978200A5422F /* NSData+CommonCrypto.m in Sources */,
 				9AE4E6B41F03F45B00A5422F /* ButtonCell.m in Sources */,
+				9A1068DB1F060FB90016F605 /* DetailTVController.m in Sources */,
 				9AE4E7061F04986500A5422F /* ModelObject.m in Sources */,
 				9AE4E6F61F04976800A5422F /* DBManager.m in Sources */,
 				9AE4E6BD1F03FAF400A5422F /* DetailCell.m in Sources */,
 				9AE4E7101F049C5C00A5422F /* DownSelectView.m in Sources */,
 				9AE4E6FD1F0497A800A5422F /* UIView+Utility.m in Sources */,
 				9AE4E6F71F04977000A5422F /* StoreManager.m in Sources */,
-				9AE4E6BA1F03FA2300A5422F /* DetailViewController.m in Sources */,
 				9AE4E6F81F04977F00A5422F /* NSData+Base64.m in Sources */,
 				9AE4E6C31F04043F00A5422F /* AddViewController.m in Sources */,
 			);

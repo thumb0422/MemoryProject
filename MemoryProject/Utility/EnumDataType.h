@@ -33,7 +33,7 @@ typedef NS_ENUM (NSInteger,kDataAction){
     kDataActionAdd    = 900,
     kDataActionUpdate = 901,
     kDataActionDelete = 902,
-    kDataActionQry    =  903,
+    kDataActionQry    = 903,
     kDataActionOther  = 909,
 };
 

@@ -1,28 +1,29 @@
 //
-//  DetailViewController.m
+//  DetailTVController.m
 //  MemoryProject
 //
-//  Created by chliu.brook on 28/06/2017.
+//  Created by chliu.brook on 30/06/2017.
 //  Copyright © 2017 chliu.brook. All rights reserved.
 //
 
-#import "DetailViewController.h"
-#import "SubDetailViewController.h"
+#import "DetailTVController.h"
 #import "DetailCell.h"
 #import "db005.h"
-
-@interface DetailViewController (){
+#import "SubDetailViewController.h"
+@interface DetailTVController (){
     NSMutableArray *_dataArray;
 }
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) StoreManager *storeManager;
 @end
 
-@implementation DetailViewController
+@implementation DetailTVController
+@synthesize tableView;
 static NSString * const reuseIdentifier = @"DetailCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _dataArray = [[NSMutableArray alloc] initWithCapacity:0];
+    self.title  = @"detail";
+    _dataArray = [NSMutableArray arrayWithCapacity:0];
     NSDictionary *qryDic = @{@"tableName":@"db005",
                              @"filterInfo":@{@"dataType":INT2STRING(_type)}
                              };
@@ -40,10 +41,6 @@ static NSString * const reuseIdentifier = @"DetailCell";
     }
     [self.tableView reloadData];
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark storeManager
 -(StoreManager *)storeManager{
@@ -53,22 +50,22 @@ static NSString * const reuseIdentifier = @"DetailCell";
     return _storeManager;
 }
 
-#pragma mark UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60.0f;
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    SubDetailViewController *vc = [HOME_STORYBOARD instantiateViewControllerWithIdentifier:@"SubDetailViewController"];
-//    vc.db = [_dataArray objectAtIndex:indexPath.row];
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-#pragma mark UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     cell.tag = indexPath.row;
     db005 *data = [_dataArray objectAtIndex:indexPath.row];
@@ -76,23 +73,35 @@ static NSString * const reuseIdentifier = @"DetailCell";
     return cell;
 }
 
+#pragma mark UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    NSLog(@"%@,identify = %@",sender,segue.identifier);
-    if ([segue.destinationViewController class] == [SubDetailViewController class]){
+    if ([segue.identifier isEqualToString:@"DetailTV2SubDetail"]){
         SubDetailViewController *vc = segue.destinationViewController;
         NSInteger row = -1;
         if ([sender isKindOfClass:(DetailCell.self)]){
             row = ((DetailCell *)sender).tag;
         }
+        if (row < 0){
+            row = 0;
+        }
         vc.db = [_dataArray objectAtIndex:row];
     }
 }
- 
+
 -(IBAction)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
-    NSLog(@"identify = %@",unwindSegue.identifier);
+    
 }
+
 @end
