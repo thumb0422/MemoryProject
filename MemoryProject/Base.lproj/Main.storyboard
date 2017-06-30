@@ -151,6 +151,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="accountDescText" destination="FDn-rk-zeI" id="YeA-my-wZX"/>
                                     <segue destination="V5C-60-Vvu" kind="show" identifier="DetailTV2SubDetail" id="KD5-yD-vhH"/>
                                 </connections>
                             </tableViewCell>
@@ -254,10 +255,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQP-Q7-10s">
-                                <rect key="frame" x="51" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQP-Q7-10s">
+                                <rect key="frame" x="15" y="250" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.47626346470000003" green="0.86858380820000003" blue="0.97680455450000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d1I-zy-zgJ"/>
+                                </constraints>
+                                <state key="normal" title="存  储  记  忆"/>
                                 <connections>
                                     <action selector="saveBtnClick:" destination="Cnr-ya-vOE" eventType="touchUpInside" id="Nho-Sr-hyF"/>
                                 </connections>
@@ -265,11 +269,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bQP-Q7-10s" firstAttribute="leading" secondItem="RHg-rr-xI5" secondAttribute="leading" constant="15" id="2PD-SO-WkJ"/>
                             <constraint firstItem="s31-rG-byZ" firstAttribute="leading" secondItem="RHg-rr-xI5" secondAttribute="leading" constant="15" id="5fw-vs-hRf"/>
                             <constraint firstItem="P7y-8H-VzI" firstAttribute="leading" secondItem="GM6-eG-Vgo" secondAttribute="trailing" id="6PE-aa-8qW"/>
                             <constraint firstItem="B7V-tu-oaL" firstAttribute="top" secondItem="QLa-1x-vJY" secondAttribute="bottom" constant="15" id="ArT-8k-YhO"/>
                             <constraint firstItem="Eav-z7-X6L" firstAttribute="leading" secondItem="RHg-rr-xI5" secondAttribute="leading" constant="15" id="Nws-Wv-iPL"/>
                             <constraint firstItem="P7y-8H-VzI" firstAttribute="centerY" secondItem="GM6-eG-Vgo" secondAttribute="centerY" id="P3f-Ff-vyA"/>
+                            <constraint firstItem="bQP-Q7-10s" firstAttribute="top" secondItem="s31-rG-byZ" secondAttribute="bottom" constant="30" id="Pt8-5w-sqI"/>
                             <constraint firstAttribute="trailing" secondItem="Fby-UT-RP7" secondAttribute="trailing" constant="10" id="S92-4N-P6p"/>
                             <constraint firstAttribute="trailing" secondItem="pV5-zN-yvj" secondAttribute="trailing" constant="10" id="TEm-t7-whg"/>
                             <constraint firstItem="pV5-zN-yvj" firstAttribute="centerY" secondItem="Eav-z7-X6L" secondAttribute="centerY" id="Y5W-58-Wr7"/>
@@ -278,6 +284,7 @@
                             <constraint firstItem="Fby-UT-RP7" firstAttribute="centerY" secondItem="s31-rG-byZ" secondAttribute="centerY" id="aYg-t8-zL3"/>
                             <constraint firstItem="GM6-eG-Vgo" firstAttribute="top" secondItem="Eav-z7-X6L" secondAttribute="bottom" constant="15" id="ath-yN-cYi"/>
                             <constraint firstItem="bGt-si-5WS" firstAttribute="leading" secondItem="B7V-tu-oaL" secondAttribute="trailing" id="hGQ-cX-xbB"/>
+                            <constraint firstAttribute="trailing" secondItem="bQP-Q7-10s" secondAttribute="trailing" constant="15" id="moE-Tv-YYA"/>
                             <constraint firstItem="s31-rG-byZ" firstAttribute="top" secondItem="GM6-eG-Vgo" secondAttribute="bottom" constant="15" id="ptg-72-7qq"/>
                             <constraint firstItem="pV5-zN-yvj" firstAttribute="leading" secondItem="Eav-z7-X6L" secondAttribute="trailing" id="sFx-EF-liw"/>
                             <constraint firstItem="Fby-UT-RP7" firstAttribute="leading" secondItem="s31-rG-byZ" secondAttribute="trailing" id="wYa-8j-Aeq"/>
@@ -298,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqW-Pg-SLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-601" y="792"/>
+            <point key="canvasLocation" x="-878" y="819"/>
         </scene>
         <!--Sub Detail View Controller-->
         <scene sceneID="R2F-5t-cNY">

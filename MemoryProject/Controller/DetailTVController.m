@@ -23,7 +23,13 @@ static NSString * const reuseIdentifier = @"DetailCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title  = @"detail";
+    NSArray *typeArray = [TYPES componentsSeparatedByString:@"、"];
+    self.title = [typeArray objectAtIndex:(_type - 1000)];
     _dataArray = [NSMutableArray arrayWithCapacity:0];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     NSDictionary *qryDic = @{@"tableName":@"db005",
                              @"filterInfo":@{@"dataType":INT2STRING(_type)}
                              };

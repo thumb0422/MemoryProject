@@ -19,6 +19,7 @@
 #import "AppDefine.h"
 #import "StoreManager.h"
 #import "Encrypt.h"
+#import "UIColor+KYRandomColor.h"
 
 #import <FMDB/FMDB.h>
 #import <Mantle/Mantle.h>

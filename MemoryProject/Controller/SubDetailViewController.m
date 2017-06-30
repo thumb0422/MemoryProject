@@ -48,6 +48,14 @@
     });
 }
 
+-(void)textEnable:(BOOL)enable{
+    [self.accountType setMultipleTouchEnabled:enable];
+    [self.accountText setEnabled:enable];
+    [self.accountPWDText setEnabled:enable];
+    [self.accountDescText setEnabled:enable];
+    
+}
+
 -(void)Indentify{
     __block BOOL isSuccess = false;
     //新建LAContext实例
@@ -88,15 +96,13 @@
                     errorMsg = @"未通过指纹验证";
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.view makeToast:errorMsg duration:0.5f position:CSToastPositionTop];
+                    [self.view makeToast:errorMsg duration:1.5f position:CSToastPositionTop];
                 });
                 [self extracted:isSuccess];
             }
         }];
     }else{
         //todo goto 输入密码页面
-        NSLog(@"error====%@",error);
-        NSLog(@"抱歉，touchId 不可用");
         isSuccess = false;
         isShowed = isSuccess;
         [self.view makeToast:@"抱歉，指纹识别不可用，不可查看具体信息" duration:1.5f position:CSToastPositionTop];

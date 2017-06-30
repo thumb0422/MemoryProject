@@ -62,8 +62,8 @@ static id _instance = nil;
 
 -(FMDatabase *)db{
     if (!_db){
-        NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"temp.db"];
-//        NSLog(@"%@",path);
+        NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"P.db"];
+        NSLog(@"path = %@",path);
         _db = [FMDatabase databaseWithPath:path];
     }
     return _db;
@@ -74,7 +74,7 @@ static id _instance = nil;
         NSString *db005TableSql = @"CREATE TABLE db005 (accountKey  VARCHAR (30) NOT NULL UNIQUE PRIMARY KEY,account VARCHAR (200) NOT NULL,accountPWD  VARCHAR (250) NOT NULL,accountDesc VARCHAR (255)  NOT NULL,dataType VARCHAR (8) NOT NULL)";
         BOOL table005 = [self.db executeUpdate:db005TableSql];
         if (table005){
-//            NSLog(@"建表成功");
+            
         }
     }else {
         NSLog(@"建库失败");

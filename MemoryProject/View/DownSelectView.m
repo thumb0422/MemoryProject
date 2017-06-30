@@ -201,6 +201,7 @@ CGFloat angleValue(CGFloat angle) {
     }
     UILabel *contentLabel = (UILabel *)[cell viewWithTag:1000];
     contentLabel.text = _listArray[indexPath.row];
+    [contentLabel setTextColor:[UIColor randomColor]];
     return cell;
 }
 
