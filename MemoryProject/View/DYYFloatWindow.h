@@ -15,10 +15,10 @@
 //重要：所有图片都要是圆形的，程序里并没有自动处理成圆形
 
 //  warning: frame的长宽必须相等
-- (instancetype)initWithFrame:(CGRect)frame mainImageName:(NSString*)name bgcolor:(UIColor *)bgcolor;
+- (instancetype)initWithFrame:(CGRect)frame mainImageName:(NSString*)name imagesAndTitle:(NSDictionary*)imagesAndTitle bgcolor:(UIColor *)bgcolor;
 
 // 长按雷达辐射效果
-- (instancetype)initWithFrame:(CGRect)frame mainImageName:(NSString*)name  bgcolor:(UIColor *)bgcolor animationColor:animationColor;
+- (instancetype)initWithFrame:(CGRect)frame mainImageName:(NSString*)name imagesAndTitle:(NSDictionary*)imagesAndTitle bgcolor:(UIColor *)bgcolor animationColor:animationColor;
 
 // 显示（默认）
 - (void)showWindow;
