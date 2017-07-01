@@ -20,6 +20,7 @@
     IQKeyboardManager.sharedManager.enable = TRUE;
     IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = TRUE;
     IQKeyboardManager.sharedManager.toolbarDoneBarButtonItemText = @"确定";
+    [NSThread sleepForTimeInterval:1.5f];
     return YES;
 }
 

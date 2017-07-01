@@ -32,23 +32,15 @@ static NSString * const reuseIdentifier = @"ButtonCell";
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    [self.floatWindow showWindow];
-}
-
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    [self.floatWindow dissmissWindow];
-}
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.floatWindow showWindow];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    [self.floatWindow dissmissWindow];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
