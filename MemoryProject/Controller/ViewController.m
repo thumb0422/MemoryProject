@@ -24,7 +24,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
     [super viewDidLoad];
     //理财、邮箱、社交、购物、支付、游戏、培训、其他
     _typeArray = [TYPES componentsSeparatedByString:@"、"];
-    _imageArray = @[@"licai",@"youxiang",@"gouwu",@"youxi",@"gouwu",@"licai",@"youxiang",@"youxi"];
+    _imageArray = @[@"licai",@"youxiang",@"shejiao",@"gouwu",@"zhifu",@"youxi",@"qita"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +46,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 
 -(DYYFloatWindow *)floatWindow{
     if (_floatWindow == nil){
-        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(self.view.width - 100, self.view.height - 100, 50, 50) mainImageName:@"add.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
+        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(self.view.width - 80, self.view.height - 80, 50, 50) mainImageName:@"add.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
         __weak typeof(self) weakSelf = self;
         _floatWindow.clickBolcks = ^(NSInteger i) {
             [weakSelf performSegueWithIdentifier:@"Home2AddVC" sender:nil];

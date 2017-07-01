@@ -36,6 +36,7 @@
     NSString *selectTypeStr = [typeArray objectAtIndex:dataType];
     self.accountType.text = selectTypeStr;
     self.accountDescText.text = self.db.accountDesc;
+    self.accountUrlText.text = self.db.accountUrl;
     [self extracted:isShowed];
     
     [self Indentify];
@@ -53,7 +54,7 @@
     [self.accountText setEnabled:enable];
     [self.accountPWDText setEnabled:enable];
     [self.accountDescText setEnabled:enable];
-    
+    [self.accountUrlText setEnabled:enable];
 }
 
 -(void)Indentify{

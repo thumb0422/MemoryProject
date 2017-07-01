@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9A1068DB1F060FB90016F605 /* DetailTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1068DA1F060FB90016F605 /* DetailTVController.m */; };
+		9A1068DF1F0746DA0016F605 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1068DE1F0746DA0016F605 /* NavigationController.m */; };
 		9AE4E69E1F03EED700A5422F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E69D1F03EED700A5422F /* AppDelegate.m */; };
 		9AE4E6A11F03EED700A5422F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6A01F03EED700A5422F /* ViewController.m */; };
 		9AE4E6A41F03EED700A5422F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE4E6A21F03EED700A5422F /* Main.storyboard */; };
 		9AE4E6A61F03EED700A5422F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE4E6A51F03EED700A5422F /* Assets.xcassets */; };
-		9AE4E6A91F03EED700A5422F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE4E6A71F03EED700A5422F /* LaunchScreen.storyboard */; };
 		9AE4E6AC1F03EED700A5422F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6AB1F03EED700A5422F /* main.m */; };
 		9AE4E6B41F03F45B00A5422F /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6B31F03F45B00A5422F /* ButtonCell.m */; };
 		9AE4E6B71F03F60D00A5422F /* UIColor+KYRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6B51F03F60700A5422F /* UIColor+KYRandomColor.m */; };
@@ -40,6 +40,8 @@
 		7AF39EE1F0EFD6A21CABA768 /* Pods-MemoryProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryProject/Pods-MemoryProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1068D91F060FB90016F605 /* DetailTVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTVController.h; sourceTree = "<group>"; };
 		9A1068DA1F060FB90016F605 /* DetailTVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTVController.m; sourceTree = "<group>"; };
+		9A1068DD1F0746DA0016F605 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		9A1068DE1F0746DA0016F605 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		9AE4E6991F03EED700A5422F /* MemoryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE4E69C1F03EED700A5422F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AE4E69D1F03EED700A5422F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,7 +49,6 @@
 		9AE4E6A01F03EED700A5422F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9AE4E6A31F03EED700A5422F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AE4E6A51F03EED700A5422F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9AE4E6A81F03EED700A5422F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AE4E6AA1F03EED700A5422F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AE4E6AB1F03EED700A5422F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AE4E6B21F03F45B00A5422F /* ButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 				9AE4E69D1F03EED700A5422F /* AppDelegate.m */,
 				9AE4E6A51F03EED700A5422F /* Assets.xcassets */,
 				9AE4E6A21F03EED700A5422F /* Main.storyboard */,
-				9AE4E6A71F03EED700A5422F /* LaunchScreen.storyboard */,
 				9AE4E6AA1F03EED700A5422F /* Info.plist */,
 				9AE4E6AB1F03EED700A5422F /* main.m */,
 				9AE4E7071F04989400A5422F /* PrefixHeader.pch */,
@@ -213,6 +213,8 @@
 				9AE4E6BF1F04019F00A5422F /* SubDetailViewController.m */,
 				9AE4E6C11F04043F00A5422F /* AddViewController.h */,
 				9AE4E6C21F04043F00A5422F /* AddViewController.m */,
+				9A1068DD1F0746DA0016F605 /* NavigationController.h */,
+				9A1068DE1F0746DA0016F605 /* NavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,7 +315,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE4E6A91F03EED700A5422F /* LaunchScreen.storyboard in Resources */,
 				9AE4E6A61F03EED700A5422F /* Assets.xcassets in Resources */,
 				9AE4E6A41F03EED700A5422F /* Main.storyboard in Resources */,
 			);
@@ -388,6 +389,7 @@
 				9AE4E6F51F04976200A5422F /* AESCrypt.m in Sources */,
 				9AE4E6FA1F04978C00A5422F /* NSObject+Dictionary.m in Sources */,
 				9AE4E6FB1F04979100A5422F /* NSString+Base64.m in Sources */,
+				9A1068DF1F0746DA0016F605 /* NavigationController.m in Sources */,
 				9AE4E6AC1F03EED700A5422F /* main.m in Sources */,
 				9AE4E6B71F03F60D00A5422F /* UIColor+KYRandomColor.m in Sources */,
 				9AE4E69E1F03EED700A5422F /* AppDelegate.m in Sources */,
@@ -414,14 +416,6 @@
 				9AE4E6A31F03EED700A5422F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9AE4E6A71F03EED700A5422F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9AE4E6A81F03EED700A5422F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -536,6 +530,7 @@
 			baseConfigurationReference = 7AF39EE1F0EFD6A21CABA768 /* Pods-MemoryProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KJTY8FB87G;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -556,6 +551,7 @@
 			baseConfigurationReference = 679395C2996CA8C9C21D8DA9 /* Pods-MemoryProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KJTY8FB87G;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -41,6 +41,7 @@
     db5.accountPWD = [AESCrypt encrypt:self.accountPWDText.text password:EnCryptPWD];
     db5.accountDesc = self.accountDescText.text;
     db5.dataType = INT2STRING(selectedDataType);
+    db5.accountUrl = self.accountUrlText.text;
     [db5 doAction:kDataActionAdd];
     [self.view makeToast:@"保存成功" duration:1.5f position:CSToastPositionTop];
     [self performSegueWithIdentifier:@"AddVC2Home" sender:nil];

@@ -71,7 +71,7 @@ static id _instance = nil;
 
 -(void)createDB{
     if ([self.db open]){
-        NSString *db005TableSql = @"CREATE TABLE db005 (accountKey  VARCHAR (30) NOT NULL UNIQUE PRIMARY KEY,account VARCHAR (200) NOT NULL,accountPWD  VARCHAR (250) NOT NULL,accountDesc VARCHAR (255)  NOT NULL,dataType VARCHAR (8) NOT NULL)";
+        NSString *db005TableSql = @"CREATE TABLE db005 (accountKey  VARCHAR (30) NOT NULL UNIQUE PRIMARY KEY,accountUrl VARCHAR (200) ,account VARCHAR (200) ,accountPWD  VARCHAR (250) ,accountDesc VARCHAR (255)  NOT NULL,dataType VARCHAR (8) NOT NULL)";
         BOOL table005 = [self.db executeUpdate:db005TableSql];
         if (table005){
             

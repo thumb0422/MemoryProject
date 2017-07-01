@@ -14,6 +14,7 @@
     self = [super init];
     if (self){
         self.dataType = @"";
+        self.accountUrl = @"";
         self.account = @"";
         self.accountKey = [NSString uuidString];
         self.accountPWD = @"";

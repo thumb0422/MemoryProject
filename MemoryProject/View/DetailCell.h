@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *accountUrlText;
 @property (weak, nonatomic) IBOutlet UITextField *accountDescText;
 
 @end

@@ -76,12 +76,13 @@ static NSString * const reuseIdentifier = @"DetailCell";
     cell.tag = indexPath.row;
     db005 *data = [_dataArray objectAtIndex:indexPath.row];
     cell.accountDescText.text = data.accountDesc;
+    cell.accountUrlText.text = data.accountUrl;
     return cell;
 }
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60.0f;
+    return 90.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
