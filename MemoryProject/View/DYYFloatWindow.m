@@ -140,7 +140,7 @@
     self.layer.cornerRadius = cornerRadius;
     self.layer.borderWidth = width;
     if (!color) {
-        self.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.layer.borderColor = [UIColor clearColor].CGColor;
     }else{
         self.layer.borderColor = color.CGColor;
     }

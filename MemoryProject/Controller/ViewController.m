@@ -46,7 +46,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 
 -(DYYFloatWindow *)floatWindow{
     if (_floatWindow == nil){
-        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(self.view.width - 80, self.view.height - 80, 50, 50) mainImageName:@"add.png" bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
+        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(self.view.width - 80, self.view.height - 80, 50, 50) mainImageName:@"add.png" bgcolor:[UIColor clearColor] animationColor:[UIColor clearColor]];
         __weak typeof(self) weakSelf = self;
         _floatWindow.clickBolcks = ^(NSInteger i) {
             [weakSelf performSegueWithIdentifier:@"Home2AddVC" sender:nil];
