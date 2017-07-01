@@ -76,7 +76,6 @@ static NSString * const reuseIdentifier = @"ButtonCell";
     ButtonCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.imageView.image = [UIImage imageNamed:[_imageArray objectAtIndex:indexPath.row]];
     cell.type = 1000 + indexPath.row;
-    cell.tag = 1000 + indexPath.row;
     return cell;
 }
 
@@ -106,7 +105,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 -(IBAction)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"Home2DetailTV"]){
         DetailTVController *vc = [segue destinationViewController];
-        vc.type = ((ButtonCell *)sender).tag;
+        vc.type = ((ButtonCell *)sender).type;
     }
 }
 @end
