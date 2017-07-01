@@ -42,6 +42,7 @@
 		9A1068DA1F060FB90016F605 /* DetailTVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTVController.m; sourceTree = "<group>"; };
 		9A1068DD1F0746DA0016F605 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		9A1068DE1F0746DA0016F605 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		9A5452781F07E044003D8461 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9AE4E6991F03EED700A5422F /* MemoryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE4E69C1F03EED700A5422F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AE4E69D1F03EED700A5422F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -247,6 +248,7 @@
 		B2BA346D06CF0E1E2BC91C41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A5452781F07E044003D8461 /* MessageUI.framework */,
 				9AE4E7001F04982100A5422F /* libsqlite3.0.tbd */,
 				9AE4E6FF1F04981500A5422F /* LocalAuthentication.framework */,
 				A0AC3D5F9509686F26A88A77 /* libPods-MemoryProject.a */,

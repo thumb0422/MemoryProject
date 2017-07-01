@@ -10,8 +10,9 @@
 #import "DetailTVController.h"
 #import "ButtonCell.h"
 #import "DYYFloatWindow.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface ViewController (){
+@interface ViewController ()<MFMailComposeViewControllerDelegate>{
     NSArray *_typeArray;
     NSArray *_imageArray;
 }
@@ -49,7 +50,8 @@ static NSString * const reuseIdentifier = @"ButtonCell";
         _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"browse" imagesAndTitle:@{@"browse":@"用户反馈"} bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
         __weak typeof(self) weakSelf = self;
         _floatWindow.clickBolcks = ^(NSInteger i) {
-//            [weakSelf performSegueWithIdentifier:@"Home2AddVC" sender:nil];
+            
+            [weakSelf sendEmailFeedBack];
         };
     }
     return _floatWindow;
@@ -99,5 +101,69 @@ static NSString * const reuseIdentifier = @"ButtonCell";
         DetailTVController *vc = [segue destinationViewController];
         vc.type = ((ButtonCell *)sender).type;
     }
+}
+
+#pragma mark 发送邮件反馈
+-(void)sendEmailFeedBack{
+    Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
+    if (!mailClass) {
+        [self.view makeToast:@"当前系统版本不支持应用内发送邮件功能，您可以使用mailto方法代替" duration:1.5f position:CSToastPositionTop];
+        return;
+    }
+    if (![mailClass canSendMail]) {
+        [self.view makeToast:@"用户没有设置邮件账户" duration:1.5f position:CSToastPositionTop];
+        return;
+    }
+    [self displayMailPicker];
+}
+
+//调出邮件发送窗口
+- (void)displayMailPicker
+{
+    MFMailComposeViewController *mailPicker = [[MFMailComposeViewController alloc] init];
+    mailPicker.mailComposeDelegate = self;
+    
+    //设置主题
+    [mailPicker setSubject: @"记忆宝问题反馈主题"];
+    //添加收件人
+    NSArray *toRecipients = [NSArray arrayWithObject: @"thumb0422@163.com"];
+    [mailPicker setToRecipients: toRecipients];
+    
+    NSString *emailBody = @"";
+    [mailPicker setMessageBody:emailBody isHTML:YES];
+    [self presentViewController:mailPicker animated:YES completion:^{
+        
+    }];
+}
+
+#pragma mark - 实现 MFMailComposeViewControllerDelegate
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    //关闭邮件发送窗口
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSString *msg;
+        switch (result) {
+            case MFMailComposeResultCancelled:
+                msg = @"取消编辑邮件";
+                break;
+            case MFMailComposeResultSaved:
+                msg = @"成功保存邮件";
+                break;
+            case MFMailComposeResultSent:
+                msg = @"邮件在队列中等待发送";
+                break;
+            case MFMailComposeResultFailed:
+                msg = @"发送邮件失败";
+                break;
+            default:
+                msg = @"";
+                break;
+        }
+        if ([msg isEqualToString:@""]){
+            
+        }else {
+            [self.view makeToast:msg duration:1.5f position:CSToastPositionTop];
+        }
+    }];
 }
 @end
