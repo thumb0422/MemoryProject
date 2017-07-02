@@ -78,9 +78,14 @@ static NSString * const reuseIdentifier = @"DetailCell";
     UIColor *bgTmpColor = indexPath.row % 2 ? [UIColor colorWithHex:0xc3f29a] : [UIColor colorWithHex:0xeeeaaa];
     [cell setBackgroundColor:bgTmpColor];
     cell.accountDescText.text = data.accountDesc;
+//    cell.accountDescText.layer.borderWidth = 2;
+//    cell.accountDescText.layer.cornerRadius = 5;
+//    cell.accountDescText.layer.borderColor = bgTmpColor.CGColor;
+    
     cell.accountUrlText.text = data.accountUrl;
-//    [cell.accountDescText setTextColor:bgTmpColor];
-//    [cell.accountUrlText setTextColor:bgTmpColor];
+//    cell.accountUrlText.layer.borderWidth = 2;
+//    cell.accountUrlText.layer.cornerRadius = 5;
+//    cell.accountUrlText.layer.borderColor = bgTmpColor.CGColor;
     return cell;
 }
 

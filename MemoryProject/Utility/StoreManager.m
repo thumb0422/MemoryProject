@@ -97,7 +97,7 @@ static id _instance = nil;
     columnValueStr = [columnValueStr substringFromIndex:1];
     
     returnSql = [NSString stringWithFormat:@"%@%@) values (%@)",returnSql,columnStr,columnValueStr];
-    NSLog(returnSql);
+//    NSLog(returnSql);
     return returnSql;
 }
 
@@ -135,7 +135,7 @@ static id _instance = nil;
             resultSql = [NSString stringWithFormat:@"%@ and %@ = '%@'",resultSql,key,obj];
         }
     }];
-    NSLog(resultSql);
+//    NSLog(resultSql);
     return resultSql;
 }
 
@@ -153,7 +153,7 @@ static id _instance = nil;
             returnSql = [NSString stringWithFormat:@"%@ and %@ = '%@'",returnSql,key,obj];
         }
     }];
-    NSLog(returnSql);
+//    NSLog(returnSql);
     return returnSql;
 }
 
