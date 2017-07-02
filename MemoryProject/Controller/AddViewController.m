@@ -44,7 +44,7 @@
     db5.accountUrl = self.accountUrlText.text;
     [db5 doAction:kDataActionAdd];
     [self.view makeToast:@"保存成功" duration:1.5f position:CSToastPositionTop];
-    [self performSegueWithIdentifier:@"AddVC2Home" sender:nil];
+    [self performSegueWithIdentifier:@"Add2Home" sender:nil];
 }
 
 /*
@@ -56,6 +56,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC{
+    
+}
 
 #pragma mark DownSelectViewDelegate
 - (void)downSelectedView:(DownSelectView *)selectedView didSelectedAtIndex:(NSIndexPath *)indexPath{

@@ -17,7 +17,7 @@
 #define showDuration 0.1          //展开动画时间
 #define statusChangeDuration  3.0    //状态改变时间
 #define normalAlpha  0.8           //正常状态时背景alpha值
-#define sleepAlpha  0.3           //隐藏到边缘时的背景alpha值
+#define sleepAlpha  0.8           //隐藏到边缘时的背景alpha值
 #define myBorderWidth 1.0         //外框宽度
 #define marginWith  5             //间隔
 
@@ -121,6 +121,7 @@
         UIImage *image = [UIImage imageNamed:key];
         [button setTitle:_imagesAndTitle[key] forState:UIControlStateNormal];
         [button setImage:image forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
         button.tag = i;
         
@@ -286,7 +287,7 @@
             if (_bgcolor) {
                 self.backgroundColor = _bgcolor;
             }else{
-                self.backgroundColor = [UIColor grayColor];
+                self.backgroundColor = [UIColor clearColor];
             }
         }];
         //移除pan手势
