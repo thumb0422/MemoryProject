@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A1068DB1F060FB90016F605 /* DetailTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1068DA1F060FB90016F605 /* DetailTVController.m */; };
 		9A1068DF1F0746DA0016F605 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1068DE1F0746DA0016F605 /* NavigationController.m */; };
+		9A9E31731F08985B009E630F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E31721F08985B009E630F /* AboutViewController.m */; };
 		9AE4E69E1F03EED700A5422F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E69D1F03EED700A5422F /* AppDelegate.m */; };
 		9AE4E6A11F03EED700A5422F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4E6A01F03EED700A5422F /* ViewController.m */; };
 		9AE4E6A41F03EED700A5422F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE4E6A21F03EED700A5422F /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 		9A1068DD1F0746DA0016F605 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		9A1068DE1F0746DA0016F605 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		9A5452781F07E044003D8461 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9A9E31711F08985B009E630F /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		9A9E31721F08985B009E630F /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		9AE4E6991F03EED700A5422F /* MemoryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE4E69C1F03EED700A5422F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AE4E69D1F03EED700A5422F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 				9AE4E6C21F04043F00A5422F /* AddViewController.m */,
 				9A1068DD1F0746DA0016F605 /* NavigationController.h */,
 				9A1068DE1F0746DA0016F605 /* NavigationController.m */,
+				9A9E31711F08985B009E630F /* AboutViewController.h */,
+				9A9E31721F08985B009E630F /* AboutViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				9AE4E7061F04986500A5422F /* ModelObject.m in Sources */,
 				9AE4E6F61F04976800A5422F /* DBManager.m in Sources */,
 				9AE4E6BD1F03FAF400A5422F /* DetailCell.m in Sources */,
+				9A9E31731F08985B009E630F /* AboutViewController.m in Sources */,
 				9AE4E7101F049C5C00A5422F /* DownSelectView.m in Sources */,
 				9AE4E6FD1F0497A800A5422F /* UIView+Utility.m in Sources */,
 				9AE4E6F71F04977000A5422F /* StoreManager.m in Sources */,

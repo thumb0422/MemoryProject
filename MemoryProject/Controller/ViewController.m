@@ -23,6 +23,7 @@
 static NSString * const reuseIdentifier = @"ButtonCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview:self.floatWindow];
     //理财、邮箱、社交、购物、支付、游戏、培训、其他
     _typeArray = [TYPES componentsSeparatedByString:@"、"];
     _imageArray = @[@"licai",@"youxiang",@"shejiao",@"gouwu",@"zhifu",@"youxi",@"qita"];
@@ -47,11 +48,17 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 
 -(DYYFloatWindow *)floatWindow{
     if (_floatWindow == nil){
-        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"browse" imagesAndTitle:@{@"browse":@"用户反馈"} bgcolor:[UIColor lightGrayColor] animationColor:[UIColor purpleColor]];
+        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"add" imagesAndTitle:@{@"feedBack":@"用户反馈",@"about":@"关于"} bgcolor:[UIColor whiteColor] animationColor:[UIColor purpleColor]];
         __weak typeof(self) weakSelf = self;
         _floatWindow.clickBolcks = ^(NSInteger i) {
+            if (i == 0){
+                [weakSelf sendEmailFeedBack];
+            }else if (i ==1) {
+                [weakSelf performSegueWithIdentifier:@"Home2About" sender:nil];
+            }else{
+                
+            }
             
-            [weakSelf sendEmailFeedBack];
         };
     }
     return _floatWindow;
@@ -124,7 +131,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
     mailPicker.mailComposeDelegate = self;
     
     //设置主题
-    [mailPicker setSubject: @"记忆宝意见反馈"];
+    [mailPicker setSubject: @"记忆宝App意见反馈"];
     //添加收件人
     NSArray *toRecipients = [NSArray arrayWithObject: @"thumb0422@163.com"];
     [mailPicker setToRecipients: toRecipients];
