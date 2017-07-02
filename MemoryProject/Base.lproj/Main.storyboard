@@ -13,9 +13,10 @@
         <scene sceneID="ayc-f4-mO0">
             <objects>
                 <navigationController id="EM3-fX-4he" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="btT-wW-5WH">
+                    <navigationBar key="navigationBar" alpha="0.29999999999999999" contentMode="scaleToFill" barStyle="black" id="btT-wW-5WH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.37254901960784315" green="0.72156862745098038" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Eg-Yy-Nq8"/>
@@ -332,17 +333,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQP-Q7-10s">
-                                <rect key="frame" x="15" y="300" width="345" height="40"/>
-                                <color key="backgroundColor" red="0.47626346470000003" green="0.86858380820000003" blue="0.97680455450000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="d1I-zy-zgJ"/>
-                                </constraints>
-                                <state key="normal" title="存  储  记  忆"/>
-                                <connections>
-                                    <action selector="saveBtnClick:" destination="Cnr-ya-vOE" eventType="touchUpInside" id="Nho-Sr-hyF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9z-M2-zom">
                                 <rect key="frame" x="15" y="85" width="60" height="35"/>
                                 <constraints>
@@ -362,10 +352,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="url"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQP-Q7-10s">
+                                <rect key="frame" x="50" y="300" width="275" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.68041710820000001" blue="0.40232958559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d1I-zy-zgJ"/>
+                                </constraints>
+                                <state key="normal" title="保 存"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveBtnClick:" destination="Cnr-ya-vOE" eventType="touchUpInside" id="Nho-Sr-hyF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bQP-Q7-10s" firstAttribute="leading" secondItem="RHg-rr-xI5" secondAttribute="leading" constant="15" id="2PD-SO-WkJ"/>
+                            <constraint firstItem="bQP-Q7-10s" firstAttribute="leading" secondItem="RHg-rr-xI5" secondAttribute="leading" constant="50" id="2PD-SO-WkJ"/>
                             <constraint firstItem="s31-rG-byZ" firstAttribute="leading" secondItem="RHg-rr-xI5" secondAttribute="leading" constant="15" id="5fw-vs-hRf"/>
                             <constraint firstItem="P7y-8H-VzI" firstAttribute="leading" secondItem="GM6-eG-Vgo" secondAttribute="trailing" id="6PE-aa-8qW"/>
                             <constraint firstItem="B7V-tu-oaL" firstAttribute="top" secondItem="QLa-1x-vJY" secondAttribute="bottom" constant="15" id="ArT-8k-YhO"/>
@@ -384,7 +389,7 @@
                             <constraint firstItem="L9z-M2-zom" firstAttribute="leading" secondItem="RHg-rr-xI5" secondAttribute="leading" constant="15" id="eau-8S-EdW"/>
                             <constraint firstItem="Nf3-g7-Ep5" firstAttribute="leading" secondItem="L9z-M2-zom" secondAttribute="trailing" id="fBi-U1-mAz"/>
                             <constraint firstItem="bGt-si-5WS" firstAttribute="leading" secondItem="B7V-tu-oaL" secondAttribute="trailing" id="hGQ-cX-xbB"/>
-                            <constraint firstAttribute="trailing" secondItem="bQP-Q7-10s" secondAttribute="trailing" constant="15" id="moE-Tv-YYA"/>
+                            <constraint firstAttribute="trailing" secondItem="bQP-Q7-10s" secondAttribute="trailing" constant="50" id="moE-Tv-YYA"/>
                             <constraint firstItem="Nf3-g7-Ep5" firstAttribute="centerY" secondItem="L9z-M2-zom" secondAttribute="centerY" id="n1D-ne-3ej"/>
                             <constraint firstItem="s31-rG-byZ" firstAttribute="top" secondItem="GM6-eG-Vgo" secondAttribute="bottom" constant="15" id="ptg-72-7qq"/>
                             <constraint firstItem="pV5-zN-yvj" firstAttribute="leading" secondItem="Eav-z7-X6L" secondAttribute="trailing" id="sFx-EF-liw"/>
@@ -407,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqW-Pg-SLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="763"/>
+            <point key="canvasLocation" x="32.799999999999997" y="762.36881559220399"/>
         </scene>
         <!--Sub Detail View Controller-->
         <scene sceneID="R2F-5t-cNY">

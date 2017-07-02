@@ -10,7 +10,7 @@
 
 @interface DYYFloatWindow : UIWindow
 
-@property (nonatomic,copy) void(^clickBolcks)(NSInteger i);
+@property (nonatomic,copy) void(^clickBolcks)(NSString *titleName);
 
 //重要：所有图片都要是圆形的，程序里并没有自动处理成圆形
 

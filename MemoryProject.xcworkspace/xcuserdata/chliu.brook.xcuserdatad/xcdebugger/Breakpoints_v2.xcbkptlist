@@ -43,5 +43,53 @@
             </Actions>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemoryProject/View/DYYFloatWindow.m"
+            timestampString = "520687300.526991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
+            landmarkName = "-changeStatus"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DYYFloatWindow changeStatus]"
+                  moduleName = "MemoryProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chliu.brook/Documents/Brook/Work/Client/iOS/MemoryProject/MemoryProject/View/DYYFloatWindow.m"
+                  timestampString = "520687300.597048"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "339"
+                  endingLineNumber = "339"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__30-[DYYFloatWindow changeStatus]_block_invoke"
+                  moduleName = "MemoryProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chliu.brook/Documents/Brook/Work/Client/iOS/MemoryProject/MemoryProject/View/DYYFloatWindow.m"
+                  timestampString = "520687300.605041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "339"
+                  endingLineNumber = "339"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

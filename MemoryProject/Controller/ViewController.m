@@ -48,12 +48,12 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 
 -(DYYFloatWindow *)floatWindow{
     if (_floatWindow == nil){
-        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"contactUs" imagesAndTitle:@{@"feedBack":@"用户反馈",@"about":@"关于"} bgcolor:[UIColor yellowColor] animationColor:[UIColor purpleColor]];
+        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"contactUs" imagesAndTitle:@{@"feedBack":@"反馈",@"about":@"关于"} bgcolor:[UIColor yellowColor] animationColor:[UIColor purpleColor]];
         __weak typeof(self) weakSelf = self;
-        _floatWindow.clickBolcks = ^(NSInteger i) {
-            if (i == 0){
+        _floatWindow.clickBolcks = ^(NSString *titleName) {
+            if ([titleName isEqualToString:@"反馈"]){
                 [weakSelf sendEmailFeedBack];
-            }else if (i ==1) {
+            }else if ([titleName isEqualToString:@"关于"]) {
                 [weakSelf performSegueWithIdentifier:@"Home2About" sender:nil];
             }else{
                 

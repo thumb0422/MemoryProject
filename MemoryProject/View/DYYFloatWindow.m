@@ -154,6 +154,7 @@
 - (void)drawRect:(CGRect)rect {
     [self drawDash];
 }
+
 //分割线
 - (void)drawDash{
     CGContextRef context =UIGraphicsGetCurrentContext();
@@ -169,6 +170,7 @@
     CGContextStrokePath(context);
 }
 
+/*
 //改变位置
 - (void)locationChange:(UIPanGestureRecognizer*)p
 {
@@ -245,6 +247,8 @@
         }
     }
 }
+*/
+
 //点击事件
 - (void)click:(UITapGestureRecognizer*)p
 {
@@ -274,12 +278,12 @@
             _contentView.alpha  = 1;
             
             if (self.frame.origin.x <= kScreenWidth/2) {
-                [self resetContentview];
+//                [self resetContentview];
                 
                 self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, WIDTH + _imagesAndTitle.count * (self.frameWidth + marginWith) ,self.frameWidth);
             }else{
                 
-                [self moveContentviewLeft];
+//                [self moveContentviewLeft];
                 
                 self.mainImageButton.frame = CGRectMake((_imagesAndTitle.count * (self.frameWidth + marginWith)), 0, self.frameWidth, self.frameWidth);
                 self.frame = CGRectMake(self.frame.origin.x  - _imagesAndTitle.count * (self.frameWidth + marginWith), self.frame.origin.y, (WIDTH + _imagesAndTitle.count * (self.frameWidth + marginWith)) ,self.frameWidth);
@@ -290,21 +294,27 @@
                 self.backgroundColor = [UIColor clearColor];
             }
         }];
+        /*
         //移除pan手势
         if (_pan) {
             [self removeGestureRecognizer:_pan];
         }
+        */
+        /*
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(changeStatus) object:nil];
+         */
     }else{
         self.isShowTab = FALSE;
         
         //为了主按钮点击动画
         self.layer.masksToBounds = NO;
         
+        /*
         //添加pan手势
         if (_pan) {
             [self addGestureRecognizer:_pan];
         }
+        */
         
         [UIView animateWithDuration:showDuration animations:^{
             
@@ -318,7 +328,9 @@
             }
             self.backgroundColor = [UIColor clearColor];
         }];
+        /*
         [self performSelector:@selector(changeStatus) withObject:nil afterDelay:statusChangeDuration];
+        */
     }
 }
 
@@ -444,7 +456,7 @@
     
     UIButton *button = (UIButton *)sender;
     if (self.clickBolcks) {
-        self.clickBolcks(button.tag);
+        self.clickBolcks(button.titleLabel.text);
     }
 }
 
