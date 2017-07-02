@@ -114,11 +114,11 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 -(void)sendEmailFeedBack{
     Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
     if (!mailClass) {
-        [self.view makeToast:@"当前系统版本不支持应用内发送邮件功能，您可以使用mailto方法代替" duration:1.5f position:CSToastPositionTop];
+        [self.view makeToast:@"当前系统版本不支持应用内发送邮件功能，您可以使用mailto方法代替" duration:1.5f position:CSToastPositionCenter];
         return;
     }
     if (![mailClass canSendMail]) {
-        [self.view makeToast:@"用户没有设置邮件账户" duration:1.5f position:CSToastPositionTop];
+        [self.view makeToast:@"用户没有设置邮件账户" duration:1.5f position:CSToastPositionCenter];
         return;
     }
     [self displayMailPicker];
@@ -169,7 +169,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
         if ([msg isEqualToString:@""]){
             
         }else {
-            [self.view makeToast:msg duration:1.5f position:CSToastPositionTop];
+            [self.view makeToast:msg duration:1.5f position:CSToastPositionCenter];
         }
     }];
 }

@@ -75,8 +75,12 @@ static NSString * const reuseIdentifier = @"DetailCell";
     DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     cell.tag = indexPath.row;
     db005 *data = [_dataArray objectAtIndex:indexPath.row];
+    UIColor *bgTmpColor = indexPath.row % 2 ? [UIColor colorWithHex:0xc3f29a] : [UIColor colorWithHex:0xeeeaaa];
+    [cell setBackgroundColor:bgTmpColor];
     cell.accountDescText.text = data.accountDesc;
     cell.accountUrlText.text = data.accountUrl;
+//    [cell.accountDescText setTextColor:bgTmpColor];
+//    [cell.accountUrlText setTextColor:bgTmpColor];
     return cell;
 }
 

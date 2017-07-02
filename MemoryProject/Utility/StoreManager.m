@@ -81,8 +81,8 @@ static id _instance = nil;
  @return sql
  */
 -(NSString *)insertSQL:(NSDictionary *)data{
-    NSString *result = @"";
-    result = [NSString stringWithFormat:@"insert into %@ (",[data objectForKey:@"tableName"]];
+    NSString *returnSql = @"";
+    returnSql = [NSString stringWithFormat:@"insert into %@ (",[data objectForKey:@"tableName"]];
     NSDictionary *tableInfoDic = [data objectForKey:@"tableInfo"];
     NSString __block *columnStr = @"";
     NSString __block *columnValueStr = @"";
@@ -96,8 +96,9 @@ static id _instance = nil;
     columnStr = [columnStr substringFromIndex:1];
     columnValueStr = [columnValueStr substringFromIndex:1];
     
-    result = [NSString stringWithFormat:@"%@%@) values (%@)",result,columnStr,columnValueStr];
-    return result;
+    returnSql = [NSString stringWithFormat:@"%@%@) values (%@)",returnSql,columnStr,columnValueStr];
+    NSLog(returnSql);
+    return returnSql;
 }
 
 /**
@@ -134,6 +135,7 @@ static id _instance = nil;
             resultSql = [NSString stringWithFormat:@"%@ and %@ = '%@'",resultSql,key,obj];
         }
     }];
+    NSLog(resultSql);
     return resultSql;
 }
 
@@ -151,6 +153,7 @@ static id _instance = nil;
             returnSql = [NSString stringWithFormat:@"%@ and %@ = '%@'",returnSql,key,obj];
         }
     }];
+    NSLog(returnSql);
     return returnSql;
 }
 

@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    selectedDataType = 0;
     self.title = @"新增记忆仓库";
     self.accountType.placeholder = @"类型选择";
     self.accountType.delegate = self;
@@ -32,8 +33,12 @@
 }
 
 - (IBAction)saveBtnClick:(UIButton *)sender {
+    if (selectedDataType < 1000 ){
+        [self.view makeToast:@"请选择记忆类型" duration:1.0f position:CSToastPositionCenter];
+        return;
+    }
     if ([self.accountDescText.text isEqualToString:@""]){
-        [self.view makeToast:@"请输入说明信息" duration:1.0f position:CSToastPositionTop];
+        [self.view makeToast:@"请输入说明信息" duration:1.0f position:CSToastPositionCenter];
         return;
     }
     db005 *db5 = [[db005 alloc] init];
@@ -43,7 +48,7 @@
     db5.dataType = INT2STRING(selectedDataType);
     db5.accountUrl = self.accountUrlText.text;
     [db5 doAction:kDataActionAdd];
-    [self.view makeToast:@"保存成功" duration:1.5f position:CSToastPositionTop];
+    [self.view makeToast:@"保存成功" duration:1.5f position:CSToastPositionCenter];
     [self performSegueWithIdentifier:@"Add2Home" sender:nil];
 }
 

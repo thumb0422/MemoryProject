@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (KYRandomColor)
-+(UIColor*) randomColor;
++ (UIColor*) randomColor;
++ (UIColor *) colorWithHex:(NSInteger)hexValue;
 @end

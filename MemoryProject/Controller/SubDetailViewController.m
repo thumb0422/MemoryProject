@@ -20,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    isShowed = false;
     self.title = @"记忆详情";
+    [self addObserver:self forKeyPath:@"isShowed" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
+    isShowed = false;
+    [self setValue:[NSNumber numberWithBool:isShowed] forKey:@"isShowed"];
     selectedDataType = 1000;
     storeManager = [StoreManager getInstance];
     NSArray *typeArray = [TYPES componentsSeparatedByString:@"、"];
@@ -42,6 +44,13 @@
     [self Indentify];
 }
 
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"isShowed"]){
+        Boolean tmpShowed = [[self valueForKey:@"isShowed"] boolValue];
+        [self textEnable:tmpShowed];
+    }
+}
+
 - (void)extracted:(BOOL)isShow {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.accountText setText:(isShow ? [AESCrypt decrypt:self.db.account password:EnCryptPWD]:[NSString warpped])];
@@ -50,11 +59,27 @@
 }
 
 -(void)textEnable:(BOOL)enable{
-    [self.accountType setMultipleTouchEnabled:enable];
-    [self.accountText setEnabled:enable];
-    [self.accountPWDText setEnabled:enable];
-    [self.accountDescText setEnabled:enable];
-    [self.accountUrlText setEnabled:enable];
+    UIColor *bgTmpColor = enable ? [UIColor whiteColor] :[UIColor colorWithHex:0xDBDEE4];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.accountType setMultipleTouchEnabled:enable];
+        [self.accountType setBackgroundColor:bgTmpColor];
+        
+        [self.accountText setEnabled:enable];
+        [self.accountText setBackgroundColor:bgTmpColor];
+        
+        [self.accountPWDText setEnabled:enable];
+        [self.accountPWDText setBackgroundColor:bgTmpColor];
+        
+        [self.accountDescText setEnabled:enable];
+        [self.accountDescText setBackgroundColor:bgTmpColor];
+        
+        [self.accountUrlText setEnabled:enable];
+        [self.accountUrlText setBackgroundColor:bgTmpColor];
+        
+        [self.deleteBtn setHidden:!enable];
+        
+        [self.saveBtn setHidden:!enable];
+    });
 }
 
 -(void)Indentify{
@@ -69,6 +94,7 @@
         NSString *localizedReson = [NSString stringWithFormat:@"%@需要验证您的指纹来确认您的身份信息",AppName];
         [authenticationContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:localizedReson reply:^(BOOL success, NSError * _Nullable error) {
             isShowed = success;
+            [self setValue:[NSNumber numberWithBool:isShowed] forKey:@"isShowed"];
             if (success) {
                 isSuccess = YES;
                 NSLog(@"通过了Touch Id指纹验证");
@@ -97,7 +123,7 @@
                     errorMsg = @"未通过指纹验证";
                 }
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.view makeToast:errorMsg duration:1.5f position:CSToastPositionTop];
+                    [self.view makeToast:errorMsg duration:1.5f position:CSToastPositionCenter];
                 });
                 [self extracted:isSuccess];
             }
@@ -106,13 +132,47 @@
         //todo goto 输入密码页面
         isSuccess = false;
         isShowed = isSuccess;
-        [self.view makeToast:@"抱歉，指纹识别不可用，不可查看具体信息" duration:1.5f position:CSToastPositionTop];
+        [self setValue:[NSNumber numberWithBool:isShowed] forKey:@"isShowed"];
+        [self.view makeToast:@"抱歉，指纹识别不可用，不可查看具体信息" duration:1.5f position:CSToastPositionCenter];
     }
 }
 
 #pragma mark DownSelectViewDelegate
 - (void)downSelectedView:(DownSelectView *)selectedView didSelectedAtIndex:(NSIndexPath *)indexPath{
     selectedDataType = 1000 + indexPath.row;
+}
+
+- (IBAction)deleteClick:(UIButton *)sender {
+    if (!isShowed){
+        [self.view makeToast:@"未解锁，不能删除数据" duration:1.5f position:CSToastPositionCenter];
+        return;
+    }
+    NSDictionary *deleteDic = @{@"action":[NSNumber numberWithInt:kDataActionDelete],
+                                @"tableName":@"db005",
+                                @"filterInfo":@{@"accountKey":self.db.accountKey}
+                                };
+    [storeManager storeDataToStorage:deleteDic];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)saveClick:(UIButton *)sender {
+    if (!isShowed){
+        [self.view makeToast:@"未解锁，不能更新数据" duration:1.5f position:CSToastPositionCenter];
+        return;
+    }
+    //更新操作
+    NSDictionary *updateDic = @{@"action":[NSNumber numberWithInt:kDataActionUpdate],
+                                @"tableName":@"db005",
+                                @"tableInfo":@{@"account":[AESCrypt encrypt:self.accountText.text password:EnCryptPWD],
+                                               @"accountPWD":[AESCrypt encrypt:self.accountPWDText.text password:EnCryptPWD],
+                                               @"accountUrl":self.accountUrlText.text,
+                                               @"accountDesc":self.accountDescText.text,
+                                               @"dataType":INT2STRING(selectedDataType)},
+                                @"filterInfo":@{@"accountKey":self.db.accountKey}
+                                };
+    [storeManager storeDataToStorage:updateDic];
+    [self.view makeToast:@"更新数据成功" duration:1.5f position:CSToastPositionCenter];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
