@@ -16,9 +16,10 @@ typedef NS_ENUM (NSInteger,kDataType){
     kDataTypeD = 1003,//购物
     kDataTypeE = 1004,//支付
     kDataTypeF = 1005,//游戏
+    kDataTypeG = 1006,//工作
     kDataTypeOther = 2000,//其他
 };
-#define TYPES  @"理财、邮箱、社交、购物、支付、游戏、其他"
+#define TYPES  @"理财、邮箱、社交、购物、支付、游戏、工作、其他"
 
 /**
  存储数据action

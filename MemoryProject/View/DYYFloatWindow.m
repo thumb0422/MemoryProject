@@ -128,7 +128,7 @@
         // 则默认image在左，title在右
         // 改成image在上，title在下
         button.titleEdgeInsets = UIEdgeInsetsMake(self.frameWidth/2 , -image.size.width, 0.0, 0.0);
-        button.imageEdgeInsets = UIEdgeInsetsMake(2.0, 8.0, 16.0, -
+        button.imageEdgeInsets = UIEdgeInsetsMake(2.0, 12.0, 16.0, -
                                                        button.titleLabel.bounds.size.width + 8);
         button.titleLabel.font = [UIFont systemFontOfSize: self.frameWidth/5];
         [button addTarget:self action:@selector(itemsClick:) forControlEvents:UIControlEventTouchUpInside];

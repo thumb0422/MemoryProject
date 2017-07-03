@@ -12,7 +12,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-//    self.backgroundColor = [UIColor randomColor];
     self.accountDescText.enabled = false;
     self.accountUrlText.enabled = false;
 }
