@@ -12,7 +12,7 @@
 #import "DYYFloatWindow.h"
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface ViewController ()<MFMailComposeViewControllerDelegate>{
+@interface ViewController ()<MFMailComposeViewControllerDelegate,UIAlertViewDelegate>{
     NSArray *_typeArray;
     NSArray *_imageArray;
 }
@@ -48,15 +48,15 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 
 -(DYYFloatWindow *)floatWindow{
     if (_floatWindow == nil){
-        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"contactUs" imagesAndTitle:@{@"feedBack":@"反馈",@"about":@"关于"} bgcolor:[UIColor yellowColor] animationColor:[UIColor purpleColor]];
+        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"contactUs" imagesAndTitle:@{@"feedBack":@"反馈",@"about":@"关于",@"clearData":@"清除数据"} bgcolor:[UIColor yellowColor] animationColor:[UIColor purpleColor]];
         __weak typeof(self) weakSelf = self;
         _floatWindow.clickBolcks = ^(NSString *titleName) {
             if ([titleName isEqualToString:@"反馈"]){
                 [weakSelf sendEmailFeedBack];
             }else if ([titleName isEqualToString:@"关于"]) {
                 [weakSelf performSegueWithIdentifier:@"Home2About" sender:nil];
-            }else{
-                
+            }else if ([titleName isEqualToString:@"清除数据"]){
+                [weakSelf clearAllData];
             }
             
         };
@@ -110,6 +110,24 @@ static NSString * const reuseIdentifier = @"ButtonCell";
     }
 }
 
+#pragma mark 清除数据
+-(void)clearAllData{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"警告" message:@"是否要清除数据,过程不可逆" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        
+    }else {
+        NSDictionary *deleteDic = @{@"action":[NSNumber numberWithInt:kDataActionDelete],
+                                    @"tableName":@"db005",
+                                    };
+        StoreManager *storeManager = [StoreManager getInstance];
+        [storeManager storeDataToStorage:deleteDic];
+        [self.view makeToast:@"清除数据成功" duration:1.0f position:CSToastPositionCenter];
+    }
+}
 #pragma mark 发送邮件反馈
 -(void)sendEmailFeedBack{
     Class mailClass = (NSClassFromString(@"MFMailComposeViewController"));
