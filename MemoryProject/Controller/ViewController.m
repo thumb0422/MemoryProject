@@ -150,7 +150,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
     mailPicker.mailComposeDelegate = self;
     
     //设置主题
-    [mailPicker setSubject: @"记忆宝App意见反馈"];
+    [mailPicker setSubject: [NSString stringWithFormat:@"%@意见反馈",AppName]];
     //添加收件人
     NSArray *toRecipients = [NSArray arrayWithObject: @"thumb0422@163.com"];
     [mailPicker setToRecipients: toRecipients];
