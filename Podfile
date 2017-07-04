@@ -7,4 +7,5 @@ target 'MemoryProject' do
     pod 'IQKeyboardManager'
     pod 'MBProgressHUD'
     pod 'Toast'
+    pod 'UMengAnalytics'
 end

@@ -17,10 +17,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //启用umeng
+    UMConfigInstance.appKey = @"595b9618f43e4821b0001952";
+    UMConfigInstance.secret = @"";
+    UMConfigInstance.channelId = @"App Store";
+    UMConfigInstance.bCrashReportEnabled = YES;
+    UMConfigInstance.ePolicy = BATCH;
+    UMConfigInstance.eSType = E_UM_NORMAL;
+    [MobClick startWithConfigure:UMConfigInstance];
+    
+    //启用IQKeyboardManager
     IQKeyboardManager.sharedManager.enable = TRUE;
     IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = TRUE;
     IQKeyboardManager.sharedManager.toolbarDoneBarButtonItemText = @"确定";
-    [NSThread sleepForTimeInterval:1.5f];
+    [NSThread sleepForTimeInterval:1.0f];
     return YES;
 }
 
