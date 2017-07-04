@@ -22,7 +22,7 @@
 static NSString * const reuseIdentifier = @"DetailCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title  = @"detail";
+    [self.view setBackgroundColor:[UIColor colorWithHex:0xEEFBFF]];
     NSArray *typeArray = [TYPES componentsSeparatedByString:@"、"];
     self.title = [NSString stringWithFormat:@"%@记忆",[typeArray objectAtIndex:(_type - 1000)]];
     _dataArray = [NSMutableArray arrayWithCapacity:0];

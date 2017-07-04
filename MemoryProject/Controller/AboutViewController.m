@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"关于";
+    [self.view setBackgroundColor:[UIColor colorWithHex:0xEEFBFF]];
     // Do any additional setup after loading the view.
+    self.aboutLabel.text = @"   ";
 }
 
 - (void)didReceiveMemoryWarning {

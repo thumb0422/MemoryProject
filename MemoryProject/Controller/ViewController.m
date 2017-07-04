@@ -23,6 +23,7 @@
 static NSString * const reuseIdentifier = @"ButtonCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor colorWithHex:0xEEFBFF]];
     [self.view addSubview:self.floatWindow];
     //理财、邮箱、社交、购物、支付、游戏、培训、其他
     _typeArray = [TYPES componentsSeparatedByString:@"、"];
@@ -48,7 +49,7 @@ static NSString * const reuseIdentifier = @"ButtonCell";
 
 -(DYYFloatWindow *)floatWindow{
     if (_floatWindow == nil){
-        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"contactUs" imagesAndTitle:@{@"feedBack":@"反馈",@"about":@"关于",@"clearData":@"清除数据"} bgcolor:[UIColor yellowColor] animationColor:[UIColor purpleColor]];
+        _floatWindow = [[DYYFloatWindow alloc]initWithFrame:CGRectMake(30, self.view.height - 80, 50, 50) mainImageName:@"contactUs" imagesAndTitle:@{@"clearData":@"清除数据",@"feedBack":@"反馈"/*，@"about":@"关于"*/} bgcolor:[UIColor yellowColor] animationColor:[UIColor purpleColor]];
         __weak typeof(self) weakSelf = self;
         _floatWindow.clickBolcks = ^(NSString *titleName) {
             if ([titleName isEqualToString:@"反馈"]){
