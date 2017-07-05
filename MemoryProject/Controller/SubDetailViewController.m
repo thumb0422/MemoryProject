@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"记忆详情";
-    [self.view setBackgroundColor:[UIColor colorWithHex:0xEEFBFF]];
+    [self.view setBackgroundColor:[UIColor colorWithHex:0xF3FFD4]];
     [self addObserver:self forKeyPath:@"isShowed" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
     isShowed = false;
     [self setValue:[NSNumber numberWithBool:isShowed] forKey:@"isShowed"];

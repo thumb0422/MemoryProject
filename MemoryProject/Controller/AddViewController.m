@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view.
     selectedDataType = 0;
     self.title = @"新增记忆仓库";
-    [self.view setBackgroundColor:[UIColor colorWithHex:0xEEFBFF]];
+    [self.view setBackgroundColor:[UIColor colorWithHex:0xF3FFD4]];
     self.accountType.placeholder = @"类型选择";
     self.accountType.delegate = self;
     self.accountType.listArray = [TYPES componentsSeparatedByString:@"、"];
