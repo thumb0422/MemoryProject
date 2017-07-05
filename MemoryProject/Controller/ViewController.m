@@ -23,7 +23,7 @@
 static NSString * const reuseIdentifier = @"ButtonCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor colorWithHex:0xEEFBFF]];
+    [self.view setBackgroundColor:[UIColor colorWithHex:0xF3FFD4]];
     [self.view addSubview:self.floatWindow];
     //理财、邮箱、社交、购物、支付、游戏、培训、其他
     _typeArray = [TYPES componentsSeparatedByString:@"、"];
