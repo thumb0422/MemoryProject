@@ -8,4 +8,5 @@ target 'MemoryProject' do
     pod 'MBProgressHUD'
     pod 'Toast'
     pod 'UMengAnalytics'
+    pod 'skpsmtpmessage'
 end
