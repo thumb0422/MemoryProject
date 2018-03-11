@@ -359,7 +359,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -547,10 +547,10 @@
 				INFOPLIST_FILE = MemoryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brook.memoryDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brook.MemoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "53f4de06-168b-4761-9b38-58d14905b1d4";
-				PROVISIONING_PROFILE_SPECIFIER = com.brook.memoryDev;
+				PROVISIONING_PROFILE = "4cd6d6a3-0242-40eb-90d1-25b620de575f";
+				PROVISIONING_PROFILE_SPECIFIER = comomDev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -569,10 +569,10 @@
 				INFOPLIST_FILE = MemoryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brook.memoryDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brook.MemoryTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "53f4de06-168b-4761-9b38-58d14905b1d4";
-				PROVISIONING_PROFILE_SPECIFIER = com.brook.memoryDev;
+				PROVISIONING_PROFILE = "4cd6d6a3-0242-40eb-90d1-25b620de575f";
+				PROVISIONING_PROFILE_SPECIFIER = comomDev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

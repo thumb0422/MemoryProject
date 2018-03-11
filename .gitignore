@@ -1,0 +1,6 @@
+*.DS_Store
+Pods/Headers/
+Pods
+*.xcbkptlist
+*.xcuserstate
+*.lock
