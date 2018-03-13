@@ -2,3 +2,5 @@
 MemoryProject.xcodeproj/xcuserdata/liuchunhua.xcuserdatad/xcschemes/xcschememanagement.plist
 .DS_Store
 MemoryProject.xcworkspace/xcuserdata/liuchunhua.xcuserdatad/UserInterfaceState.xcuserstate
+.lock
+Pods
