@@ -547,10 +547,10 @@
 				INFOPLIST_FILE = MemoryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brook.MemoryTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brook.MemoryDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4cd6d6a3-0242-40eb-90d1-25b620de575f";
-				PROVISIONING_PROFILE_SPECIFIER = comomDev;
+				PROVISIONING_PROFILE = "9d1b406e-56f8-47c5-ab30-abf337e06c19";
+				PROVISIONING_PROFILE_SPECIFIER = comDev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -569,10 +569,10 @@
 				INFOPLIST_FILE = MemoryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brook.MemoryTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brook.MemoryDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4cd6d6a3-0242-40eb-90d1-25b620de575f";
-				PROVISIONING_PROFILE_SPECIFIER = comomDev;
+				PROVISIONING_PROFILE = "9d1b406e-56f8-47c5-ab30-abf337e06c19";
+				PROVISIONING_PROFILE_SPECIFIER = comDev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
