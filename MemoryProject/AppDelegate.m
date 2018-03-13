@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DBManager.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,7 @@
     IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = TRUE;
     IQKeyboardManager.sharedManager.toolbarDoneBarButtonItemText = @"确定";
     [NSThread sleepForTimeInterval:1.0f];
+    [DBManager getInstance];
     return YES;
 }
 

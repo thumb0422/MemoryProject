@@ -155,6 +155,10 @@ static NSString * const reuseIdentifier = @"ButtonCell";
     NSArray *toRecipients = [NSArray arrayWithObject: @"thumb0422@163.com"];
     [mailPicker setToRecipients: toRecipients];
     
+    //附件
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"P.db"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    [mailPicker addAttachmentData:data mimeType:@"" fileName:@"数据备份"];
     NSString *emailBody = @"";
     [mailPicker setMessageBody:emailBody isHTML:YES];
     [self presentViewController:mailPicker animated:YES completion:^{
